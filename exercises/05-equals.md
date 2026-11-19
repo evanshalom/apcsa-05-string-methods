@@ -14,16 +14,16 @@ String e = null;
 
 | # | Expression | Predicted | Actual | Missed? |
 |---|---|---|---|---|
-| 1 | `a == b` | | | |
-| 2 | `a == c` | | | |
-| 3 | `a.equals(c)` | | | |
-| 4 | `a.equals(d)` | | | |
-| 5 | `a.toLowerCase().equals(d)` | | | |
-| 6 | `a.compareTo(c)` | | | |
-| 7 | `a.compareTo(d)` | | | |
-| 8 | `"apple".compareTo("banana")` | | | |
-| 9 | `"b".compareTo("a")` | | | |
-| 10 | `a.equals(e)` | | | |
+| 1 | `a == b` | true  | true| |
+| 2 | `a == c` |  false| false| |
+| 3 | `a.equals(c)` |true |true | |
+| 4 | `a.equals(d)` | false| flase| |
+| 5 | `a.toLowerCase().equals(d)` | true| true| |
+| 6 | `a.compareTo(c)` | 0| 0| |
+| 7 | `a.compareTo(d)` | -32|-32 | |
+| 8 | `"apple".compareTo("banana")` |-1 |-1 | |
+| 9 | `"b".compareTo("a")` | 1| 1| |
+| 10 | `a.equals(e)` | false| false| |
 
 Run each one in a scratch Java file and fill in Actual. Mark every miss.
 
@@ -36,7 +36,7 @@ Say whether it was `==` versus `equals`, or the sign of `compareTo`.
 Write ONE line of code that is true when `s` matches "yes" and never crashes, even if `s` is `null`.
 
 ```java
-// your line
+"yes".equals(s)
 ```
 
 ## Before tomorrow
